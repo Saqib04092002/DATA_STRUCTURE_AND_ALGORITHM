@@ -1283,12 +1283,24 @@ public class pratice_2{
 
 import java.util.*;
 public class pratice_2{
+    public static void reverseArray(int arr[]){
+        int start = 0;
+        int end = arr.length-1;
+        while(start<end){
+          int temp = arr[start];
+          arr[start] = arr[end];
+          arr[end] = temp;
+          start++;
+          end--;
+        }
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
     public static void main(String[] args) {
+        int arr[] = {1,4,2,5,7,4};
+        reverseArray(arr);
         
-        String firstname = "Mohd";
-        String lastname = "khan";
-        String fullname = firstname+" "+lastname;
-        System.out.println(fullname);
         
         
      }

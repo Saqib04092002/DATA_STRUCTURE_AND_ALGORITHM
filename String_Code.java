@@ -196,3 +196,14 @@ public class String_Code{
         System.out.println(toUpperCase(str));
     }
 }*/
+
+import java.util.Arrays;
+
+public class String_Code{
+    public static void main(String[] args) {
+
+        String str[] = {"mohd","saqib","khan"};
+        Arrays.sort(str);
+        System.out.println(str[2]);
+    }
+}
