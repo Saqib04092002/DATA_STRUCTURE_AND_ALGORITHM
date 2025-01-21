@@ -161,16 +161,50 @@
 
 
 
-// Question - Check if a number is a power of 2 or not . 
+// Question2 - Check if a number is a power of 2 or not . 
 /*public class Bit_Manipulation {
     public static boolean isPowerofTwo(int n){
-        if((n&(n-1)) == 0){
-            return true;
-        }else{
-            return false;
-        }
+        return (n&(n-1)) == 0;
     }
     public static void main(String[] args) {
         System.out.println(isPowerofTwo(11));
     }
 }*/
+
+
+//Question 3 - Count Set Bits in a Number. 
+/*public class Bit_Manipulation {
+    public static int countSetBits(int n){
+        int count = 0;
+        while(n>0){
+            if((n&1)!=0){
+                count++;
+            }
+           n =  n>>1; 
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+        System.out.println(countSetBits(15));
+    }
+}*/
+
+
+// Question 4 - Fast Exponentiation .
+public class Bit_Manipulation {
+    public static int fastExpo(int a, int n){
+        int ans = 1;
+        while(n>0){
+            if((n&1) != 0){
+                ans = ans*a;
+            }
+            a=a*a;
+            n=n>>1;
+        }
+        return ans;
+  
+    }
+    public static void main(String[] args) {
+        System.out.println(fastExpo(3, 100 ));
+    }
+}
